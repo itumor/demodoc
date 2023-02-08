@@ -1,0 +1,8 @@
+apiVersion: custom-api.example.org/v1alpha1
+kind: custom-database
+metadata:
+  name: claimed-us-database
+  namespace: test
+spec:
+  region: "US"
+

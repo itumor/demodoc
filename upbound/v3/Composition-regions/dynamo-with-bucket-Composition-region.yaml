@@ -1,0 +1,50 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: dynamo-with-bucket
+spec:
+  compositeTypeRef:
+    apiVersion: custom-api.example.org/v1alpha1
+    kind: database
+  resources:
+    - name: s3Bucket
+      base:
+        apiVersion: s3.aws.upbound.io/v1beta1
+        kind: Bucket
+        metadata:
+          name: crossplane-quickstart-bucket
+        spec:
+          forProvider:
+            name: default
+            region: "us-east-2"
+      patches:
+        - fromFieldPath: "spec.region"
+          toFieldPath: "spec.forProvider.region"
+          transforms:
+            - type: map
+              map: 
+                EU: "eu-north-1"
+                US: "us-east-2"
+    - name: dynamoDB
+      base:
+        apiVersion: dynamodb.aws.upbound.io/v1beta1
+        kind: Table
+        metadata:
+          name: crossplane-quickstart-database
+        spec:
+          forProvider:
+            writeCapacity: 1
+            readCapacity: 1
+            attribute:
+              - name: S3ID
+                type: S
+            hashKey: S3ID
+            region: "us-east-2"
+      patches:
+        - fromFieldPath: "spec.region"
+          toFieldPath: "spec.forProvider.region"
+          transforms:
+            - type: map
+              map: 
+                EU: "eu-north-1"
+                US: "us-east-2"

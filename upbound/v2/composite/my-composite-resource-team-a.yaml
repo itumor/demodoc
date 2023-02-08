@@ -1,0 +1,6 @@
+apiVersion: custom-api.example.org/v1alpha1
+kind: database
+metadata:
+  name: my-composite-resource-team-a
+spec: 
+  region: "US"

@@ -1,3 +1,11 @@
+-----------------------------------
+-----------------------------------
+------------------------------------
+# Crossplane
+-----------------------------------
+-----------------------------------
+------------------------------------
+
 # Install the Crossplane command-line 
 To build a configuration package install the Crossplane Kubernetes command-line 
 extension.
@@ -36,6 +44,13 @@ kubectl crossplane  push configuration  huma/crossplane-aws-quickstart:v0.0.1 -f
 https://hub.docker.com/r/huma/crossplane-aws-quickstart/tags
 
 
+-----------------------------------
+-----------------------------------
+------------------------------------
+# Upbound
+-----------------------------------
+-----------------------------------
+------------------------------------
 # up - The Upbound CLI
 ## Install
 Homebrew

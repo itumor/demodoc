@@ -1,0 +1,7 @@
+apiVersion: custom-api.example.org/v1alpha1
+kind: custom-database
+metadata:
+  name: claimed-database
+  namespace: team-b
+spec:
+  region: "US"

@@ -1,0 +1,10 @@
+apiVersion: meta.pkg.crossplane.io/v1
+kind: Configuration
+metadata:
+  name: crossplane-aws-quickstart
+spec:
+  crossplane:
+    version: ">=v1.11.0"
+  dependsOn:
+    - provider: xpkg.upbound.io/upbound/provider-aws
+      version: ">=v0.27.0"
