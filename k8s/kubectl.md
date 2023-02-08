@@ -104,4 +104,4 @@ kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get
 
 kubectl patch custom-database.custom-api.example.org/claimed-us-database -p '{"metadata":{"finalizers": []}}' --type=merge -n test
 
-kubectl patch tables.dynamodb.aws.upbound.io crossplane-quickstart-database-4361 -p '{"metadata":{"finalizers": []}}' --type=merge 
+kubectl patch providerrevisions.pkg.crossplane.io upbound-provider-aws-d1299bb1cbf0 -p '{"metadata":{"finalizers": []}}' --type=merge 
