@@ -1,0 +1,5 @@
+# ignore vscode files (debug config etc...)
+/.vscode
+/.idea
+*.xpkg
+crossplane/V4/crossplane-aws-quickstart/crossplane-aws-quickstart.xpkg

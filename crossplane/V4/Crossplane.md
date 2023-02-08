@@ -36,9 +36,10 @@ docker login
 
 # Push a configuration package
 
+
+
 ```
-cd crossplane-aws-quickstart
-kubectl crossplane  push configuration  huma/crossplane-aws-quickstart:v0.0.1 -f crossplane-aws-quickstart.xpkg
+kubectl crossplane  push configuration  huma/crossplane-aws-quickstart:v0.0.1 -f crossplane-aws-quickstart/crossplane-aws-quickstart.xpkg
 ```
 
 https://hub.docker.com/r/huma/crossplane-aws-quickstart/tags
@@ -67,11 +68,11 @@ up login
 # Build Package Upbound
 ```
 VERSION_TAG=v0.0.1
-up xpkg build --name crossplane-aws-quickstart.xpkg
+up xpkg build --name crossplane-aws-quickstart.xpkg  -f crossplane-aws-quickstart/
 ```
 # push Package Upbound
 ```
-up xpkg push xpkg.upbound.io/itumor2005/crossplane-aws-quickstart:${VERSION_TAG} -f crossplane-aws-quickstart.xpkg
+up xpkg push xpkg.upbound.io/itumor2005/crossplane-aws-quickstart:${VERSION_TAG} -f crossplane-aws-quickstart/crossplane-aws-quickstart.xpkg
 ```
 
 https://marketplace.upbound.io/account/itumor2005
