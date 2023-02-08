@@ -9,3 +9,11 @@ crossplane-stable/crossplane \
 --namespace crossplane-system \
 --create-namespace
 ```
+
+```
+kubectl get all  -n  crossplane-system
+```
+
+```
+kubectl get crds | grep crossplane 
+```
