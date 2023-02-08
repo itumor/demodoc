@@ -43,3 +43,4 @@ argocd login 127.0.0.1:8080
 admin
 cpJ!8WHd9l45
 ```
+

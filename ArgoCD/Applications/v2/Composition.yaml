@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: composition
+spec:
+  destination:
+    name: ''
+    namespace: ''
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: ./crossplane/v2/
+    repoURL: 'https://github.com/itumor/demodoc.git'
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  sources: []
+  project: default
+  syncPolicy:
+    automated: null
+    syncOptions: []
