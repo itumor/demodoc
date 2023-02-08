@@ -3,25 +3,25 @@ kind: Namespace
 metadata:
   name: manage-resources
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "-10"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: composition
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "-10"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: composite
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "-10"
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
   name: claim
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "-10"

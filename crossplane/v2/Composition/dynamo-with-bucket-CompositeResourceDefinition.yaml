@@ -2,6 +2,8 @@ apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
   name: databases.custom-api.example.org
+  annotations:
+    argocd.argoproj.io/sync-wave: "-9"
 spec:
   group: custom-api.example.org
   names:
