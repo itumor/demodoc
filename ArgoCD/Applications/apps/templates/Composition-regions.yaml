@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: composition-regions
+  name: composition-regions-v3
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io

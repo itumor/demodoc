@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: claim
+  name: claim-v2
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
