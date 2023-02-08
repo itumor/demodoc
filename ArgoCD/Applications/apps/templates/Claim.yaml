@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: Composition
+  name: claim
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: Composition
+    namespace: claim
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: ./crossplane/v1/Composition
+    path: ./crossplane/v1/Claim
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
 
