@@ -85,13 +85,23 @@ kubectl patch database.custom-api.example.org my-composite-resource-team-a -p '{
 kubectl patch database.custom-api.example.org my-composite-resource-team-b -p '{"metadata":{"finalizers": []}}' --type=merge
 
 ```
-kubectl patch applications.argoproj.io claim -p '{"metadata":{"finalizers": []}}' --type=merge -n argocd
+kubectl patch applications.argoproj.io manage-resources-v1 -p '{"metadata":{"finalizers": []}}' --type=merge -n argocd
 
-kubectl patch applications.argoproj.io composition-regions -p '{"metadata":{"finalizers": []}}' --type=merge -n argocd
-
-```
+kubectl patch applications.argoproj.io manage-resources-v1 -p '{"metadata":{"finalizers": []}}' --type=merge -n argocd
 
 ```
-kubectl patch applications.argoproj.io  claim  -p '{"metadata": {"finalizers": ["resources-finalizer.argocd.argoproj.io"]}}' --type merge -n argocd
-kubectl delete applications.argoproj.io claim -n argocd --force
+
 ```
+kubectl patch applications.argoproj.io  manage-resources-v1  -p '{"metadata": {"finalizers": ["resources-finalizer.argocd.argoproj.io"]}}' --type merge -n argocd
+kubectl delete applications.argoproj.io manage-resources-v1 -n argocd --force
+```
+
+
+
+kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -n test 
+
+
+
+kubectl patch custom-database.custom-api.example.org/claimed-us-database -p '{"metadata":{"finalizers": []}}' --type=merge -n test
+
+kubectl patch tables.dynamodb.aws.upbound.io crossplane-quickstart-database-4361 -p '{"metadata":{"finalizers": []}}' --type=merge 
