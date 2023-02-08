@@ -12,4 +12,8 @@ argocd app sync apps
 # sync apps
 argocd app sync -l app.kubernetes.io/instance=apps
 # delete apps
-argocd app delete apps 
+argocd app delete apps --yes    
+
+argocd app delete -l app.kubernetes.io/instance=apps --yes    
+
+kubectl delete database --all

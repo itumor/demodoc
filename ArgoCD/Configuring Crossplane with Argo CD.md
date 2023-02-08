@@ -19,4 +19,3 @@ kubectl get configmap argocd-cm -nargocd -o yaml> argocd-cm.yaml
 ```bash
 kubectl apply -f argocd-cm.yaml
 ```
-
