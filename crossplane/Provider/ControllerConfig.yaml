@@ -6,4 +6,4 @@ spec:
   podSecurityContext:
     fsGroup: 2000
   args:
-  - --max-reconcile-rate=1000
+  - --max-reconcile-rate=100
