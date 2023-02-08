@@ -1,0 +1,13 @@
+apiVersion: dynamodb.aws.upbound.io/v1beta1
+kind: Table
+metadata:
+  name: crossplane-quickstart-database-4361
+spec:
+  forProvider:
+    region: "us-east-2"
+    writeCapacity: 1
+    readCapacity: 1
+    attribute:
+      - name: S3ID
+        type: S
+    hashKey: S3ID
