@@ -1,0 +1,12 @@
+apiVersion: s3.aws.upbound.io/v1beta1
+kind: BucketVersioning
+metadata:
+  name: crossplane-quickstart-bucketversioning-4361
+spec:
+  forProvider:
+    bucket: "crossplane-quickstart-4361"
+    region: "us-east-2"
+    versioningConfiguration: 
+     - status: "Enabled"
+  providerConfigRef:
+    name: default
