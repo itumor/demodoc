@@ -7,6 +7,7 @@ spec:
     bucket: "crossplane-quickstart-4361"
     region: "us-east-2"
     versioningConfiguration: 
-     - status: "Enabled"
+#     - status: "Enabled"
+     - status: "Suspended"
   providerConfigRef:
     name: default
