@@ -26,7 +26,7 @@ kubectl edit configmaps argocd-cm -n argocd
 
 ```yaml
 data:
-  timeout.reconciliation: 60s
+  timeout.reconciliation: 30s
   application.resourceTrackingMethod: annotation
 ```
 
