@@ -4,6 +4,5 @@ metadata:
   name: debug-config
 spec:
   args:
-    - --debug
-    - --poll=10
-    - --max-reconcile-rate=100
+    - --poll=1s
+    - --max-reconcile-rate=1000
