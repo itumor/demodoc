@@ -10,4 +10,6 @@ spec:
     attribute:
       - name: S3ID
         type: S
+      - name: demo
+        type: S
     hashKey: S3ID
