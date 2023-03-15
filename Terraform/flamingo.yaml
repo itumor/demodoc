@@ -1,0 +1,10 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: argocd-demo
+resources:
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.5.11/manifests/install.yaml
+images:
+  - name: quay.io/argoproj/argocd:v2.5.11
+    newName: ghcr.io/flux-subsystem-argo/fsa/argocd
+    newTag: v2.5.11-fl.3-main-bc5b4abb
