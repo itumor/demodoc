@@ -44,6 +44,10 @@ kubectl get locks
 kubectl get controllerconfigs   
 kubectl get storeconfigs 
 ```
+# api-resources
+```
+kubectl api-resources
+```
 
 # troubleshooting
 ```
